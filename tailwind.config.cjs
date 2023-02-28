@@ -11,6 +11,9 @@ module.exports = {
           secondary: "var(--secondary-color)",
         },
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+      },
       fontFamily: {
         montserrat: ["Montserrat"],
       },

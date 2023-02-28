@@ -1,5 +1,11 @@
 <script setup>
 import { HomeIcon, CogIcon } from "@heroicons/vue/24/outline"
+import Categories from "./components/Categories.vue";
+import LatestBlogs from "./components/LatestBlogs.vue";
+import PopularBlogs from "./components/PopularBlogs.vue";
+
+import categories from "./data/categories";
+console.log(categories)
 </script>
 
 <template>
@@ -38,80 +44,22 @@ import { HomeIcon, CogIcon } from "@heroicons/vue/24/outline"
       <!--MAIN SECTION START-->
       <main class="col-span-7">
         <!--MAIN ROUTE-->
-        <div class="MainRoute h-12 flex items-center justify-center text-center bg-black/20 backdrop-blur-lg sticky top-0">
+        <div
+          class="MainRoute h-12 flex items-center justify-center text-center bg-black/20 backdrop-blur-lg sticky top-0">
           <div class="">
             <h4 class="font-bold">Anasayfa</h4>
           </div>
         </div>
+        
         <!--MAIN ROUTE END-->
 
-        <div class="py-4 px-4">
+        <div class="flex flex-col space-y-4 px-4">
+          <Categories :categories="categories" />
 
+          <PopularBlogs />
 
-          <!--CATEGORIES-->
-          <p>categories</p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus incidunt amet quidem et cumque pariatur
-          consequuntur, sapiente commodi repellendus a voluptate odio, ut aut, fuga dolor autem impedit modi libero?
-          Necessitatibus ratione id assumenda numquam, omnis eaque non rerum nesciunt, ipsam tenetur eum obcaecati
-          maiores! Iure commodi libero alias, ducimus fuga animi quisquam veniam neque perspiciatis quam recusandae eius
-          aperiam.
-          Minima assumenda eaque delectus molestiae ullam maiores alias recusandae incidunt quisquam. Natus ipsum
-          explicabo quas omnis id dolore, ab nemo vitae? Perferendis architecto beatae reiciendis sed dignissimos tempora
-          odit natus.
-          Rem nam reiciendis veniam in omnis asperiores sit illo eos. Et, minus. Repudiandae dolore, tempore quaerat cum
-          dicta odit fugit officiis ullam delectus deserunt praesentium. Quis nisi commodi nobis nulla!
-          Totam provident tenetur facilis quisquam, illo rerum consectetur dolor quae iste numquam deleniti corporis
-          tempore inventore, voluptatibus culpa voluptatum optio dolores iusto nisi cupiditate reprehenderit dignissimos
-          nam? Itaque, ipsum asperiores!
-          Ea pariatur non perferendis dolorum commodi debitis error, officiis quas, est eaque itaque suscipit vel natus
-          iure unde ex. Atque saepe illum obcaecati quod voluptate, dolores culpa deleniti accusamus maiores?
-          Eveniet facere rem harum unde sequi, minus similique iure asperiores nesciunt autem suscipit explicabo
-          voluptatum deleniti iusto provident recusandae tempora sapiente numquam, eum fuga. Possimus recusandae mollitia
-          aut itaque! Adipisci.
-          Laudantium nemo sint animi fugit repudiandae at perspiciatis omnis, quis aperiam quo blanditiis repellendus
-          provident quisquam pariatur voluptate, asperiores praesentium voluptas iste id suscipit dolorum cupiditate,
-          adipisci error esse. Blanditiis?
-          Quidem labore distinctio enim, magnam nulla quae fuga nemo repudiandae. Ab eligendi est nostrum dolorem minima
-          possimus quas, laudantium molestias velit dignissimos beatae rem error harum impedit ipsum reiciendis
-          perferendis?
-          Ducimus neque fugit unde officia sequi ut nostrum. Alias ex distinctio tenetur nisi quam minus consequuntur
-          natus quas. Culpa et dolores ex labore accusamus aliquam voluptatibus tempore unde earum eius.
-          Aliquid nostrum amet maxime tempore assumenda qui fugit iure perspiciatis doloremque incidunt suscipit iste
-          perferendis optio ad, adipisci architecto vero cupiditate delectus. Saepe eius quae quis quibusdam
-          exercitationem animi commodi?
-          Vero incidunt veritatis a provident iusto facilis. Quo a eveniet magnam dolorem veniam cum quasi ab obcaecati
-          numquam totam sunt, ipsam vitae dolores soluta porro itaque laudantium repellendus impedit id!
-          Voluptatibus illo aut reprehenderit. Recusandae id provident voluptates ipsa quo, facere consectetur iste sed
-          quisquam fuga ipsam rem blanditiis consequatur voluptate qui odit nesciunt explicabo cumque, sunt incidunt ea.
-          Molestiae?
-          Facilis sapiente atque obcaecati dolorum ullam modi aspernatur distinctio excepturi laborum, unde iure sint
-          ipsum eum reprehenderit inventore eaque assumenda sed aut consequatur placeat delectus! Quasi recusandae
-          suscipit incidunt iste!
-          Nobis incidunt omnis dicta aspernatur facere quas minus dolores, itaque, libero distinctio quidem ipsa possimus
-          pariatur! Itaque magnam, eveniet, at accusantium dignissimos maxime repellendus illum commodi pariatur nobis
-          saepe unde.
-          Perspiciatis doloribus distinctio esse? Dolorem, amet exercitationem voluptate cupiditate non vitae commodi illo
-          libero facere, perferendis, quas dolore perspiciatis ipsum dolor quae reiciendis porro officia quibusdam? Nihil
-          sapiente rem magnam.
-          Rem cum odio totam earum eveniet incidunt iusto officiis nesciunt commodi numquam corporis ipsam itaque
-          consequatur nostrum, consequuntur, facilis laudantium magni. Error porro provident blanditiis praesentium harum
-          quo repudiandae quas.
-          Possimus accusantium laudantium, dolor impedit dicta non tempora est aliquam iste optio consequatur mollitia
-          soluta pariatur cupiditate repudiandae suscipit culpa, magni, expedita perspiciatis. Ea, doloribus neque? Quod
-          odit et illum?
-          Sit, maxime quod. Ad recusandae illo consectetur officiis! Maxime dolorem odit magni error quam. Error, maiores
-          dicta illo laborum nihil qui porro tempore quaerat dolorem dolores culpa atque eveniet minima.
-          Provident vero corporis doloremque ipsum officia ea! Ullam rem illo deleniti vel hic impedit perspiciatis ut sed
-          eligendi maxime! Sint placeat itaque explicabo vero a debitis in, aut accusantium quibusdam!
-          <!--CATEGORIES END-->
+          <LatestBlogs />
 
-          <!--POPULAR BLOGS-->
-          <p>popular blogs</p>
-          <!--POPULAR BLOGS END-->
-
-          <!--LATEST BLOGS-->
-          <p>latest blogs</p>
-          <!--LATEST BLOGS END-->
         </div>
 
       </main>

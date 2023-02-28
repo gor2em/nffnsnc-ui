@@ -1,0 +1,15 @@
+export default [
+  "Bilim",
+  "Müzik",
+  "Felsefe & Din",
+  "Dil",
+  "Araştırma",
+  "Sanat",
+  "Tarih",
+  "Yazılım",
+  "Eğlence",
+  "Günlük",
+  "Diğer",
+  "Yemek",
+  "Test",
+];
