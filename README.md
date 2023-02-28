@@ -4,4 +4,4 @@
 
 ### Todo
 
-- [] Dark Mode
+- [ ] Dark Mode
