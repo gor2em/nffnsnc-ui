@@ -1,5 +1,6 @@
 <script setup>
 import Heading3 from './Heading3.vue';
+import Gradient from './utils/Gradient.vue';
 
 defineProps({
     categories: Array,
@@ -10,15 +11,17 @@ defineProps({
 
         <Heading3 title="Kategoriler" />
 
-        <div
-            class="rounded-3xl py-0.5 px-0.5 bg-gradient-to-tr from-amber-400 via-pink-600 to-cyan-400 category-background-animate">
-            <div class="bg-theme-primaryBackground py-2 px-2 rounded-3xl flex space-x-4 overflow-x-scroll">
+        <!-- <div
+                    class="rounded-full py-0.5 px-0.5 bg-gradient-to-tr from-amber-400 via-pink-600 to-cyan-400 category-background-animate"> -->
+        <Gradient>
+            <div class="bg-theme-primaryBackground py-2 px-1 rounded-full flex space-x-4 overflow-x-scroll">
                 <div v-for="(category, index) in categories" :key="index"
                     class="px-4 text-xs text-zinc-400 whitespace-nowrap overflow-hidden min-w-max">
                     {{ category }}
                 </div>
             </div>
-        </div>
+        </Gradient>
+        <!-- </div> -->
     </div>
 </template>
 <style scoped>
