@@ -5,6 +5,7 @@ import "vue3-carousel/dist/carousel.css"
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel"
 
 import popularBlogs from "../data/popularBlogs"
+import Gradient from './utils/Gradient.vue';
 
 </script>
 <template>
@@ -21,7 +22,10 @@ import popularBlogs from "../data/popularBlogs"
                         </h4>
                         <div class="flex flex-col space-y-2">
                             <div class="flex items-center space-x-2">
-                                <img :src="slide.user.profile_image" :alt="slide.user.name" class="w-7 h-7 rounded-full">
+                                <Gradient>
+                                    <img :src="slide.user.profile_image" :alt="slide.user.name"
+                                        class="w-7 h-7 rounded-full">
+                                </Gradient>
                                 <span class="text-xs shadow-2xl font-medium">{{ slide.user.name }}</span>
                             </div>
                             <div>
