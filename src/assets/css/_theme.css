@@ -1,6 +1,6 @@
 :root {
-  /* primary colors */
   --primary-bg-color: #000000;
+  --primary-nav-color: #fafafa;
   --primary-head-color: #f4f4f5;
   --primary-text-color: #d4d4d8;
   --primary-text-dark-color: #52525b;
@@ -9,12 +9,30 @@
   --primary-border-color: #18181b;
   --primary-icon-color: #3f3f46;
   --primary-icon-active-color: #e4e4e7;
-  /* --primary-icon-success-color: #34d399; */
 
-  /* secondary colors */
   --secondary-bg-color: #18181b;
+  --backdrop-main-bg-color: #00000033;
 
-  /* gradient colors */
+  --to-gradient: #f4f4f5;
+  --from-gradient: #9ca3af;
+  --via-gradient: #f3f4f6;
+}
+
+.light-theme {
+  --primary-bg-color: #fafafa;
+  --primary-nav-color: #18181b;
+  --primary-head-color: #18181b;
+  --primary-text-color: #262626;
+  --primary-text-dark-color: #525252;
+  --primary-text-more-dark-color: #a3a3a3;
+  --primary-text-success-color: #34d399;
+  --primary-border-color: #e4e4e7;
+  --primary-icon-color: #e4e4e7;
+  --primary-icon-active-color: #18181b;
+
+  --secondary-bg-color: #e4e4e7;
+  --backdrop-main-bg-color: #ffffff33;
+
   --to-gradient: #f4f4f5;
   --from-gradient: #9ca3af;
   --via-gradient: #f3f4f6;
