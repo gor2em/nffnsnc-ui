@@ -1,10 +1,17 @@
 <script setup>
+
+import { computed } from "vue"
+
 import UserCard from "./UserCard.vue";
 import SectionContent from "./utils/SectionContent.vue"
 import UserPoint from "./UserPoint.vue"
 import UserFollow from "./UserFollow.vue";
-defineProps({
+const props = defineProps({
     users: Array,
+    listType: {
+        type: String,
+        required: true,
+    },
     pointActive: {
         type: Boolean,
         default: false,
@@ -15,6 +22,9 @@ defineProps({
         required: true
     }
 });
+
+
+
 </script>
 <template>
     <SectionContent :title="title">
@@ -22,7 +32,8 @@ defineProps({
             <div class="flex items-center justify-between border border-theme-primaryBorder rounded-xl py-2 px-2"
                 v-for="user in users" :key="user.username">
 
-                <UserCard :username="user.username" :alt="user.username" :profile_image="user.profile_image" />
+                <UserCard :username="user.username" :alt="user.username" :profile_image="user.profile_image"
+                    :gradients-active="listType === 'popular' ? true : false" />
                 <UserPoint v-if="pointActive" />
                 <UserFollow v-else />
             </div>

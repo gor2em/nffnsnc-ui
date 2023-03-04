@@ -4,9 +4,9 @@ import { CogIcon, HomeIcon } from '@heroicons/vue/24/outline';
 
 </script>
 <template>
-    <nav>
-        <ul class="flex flex-col space-y-4 mt-4">
-            <li class="flex items-center gap-4 py-2.5 px-2 rounded-3xl">
+    <nav class="text-theme-primaryNav">
+        <ul class="flex flex-col space-y-2 mt-2">
+            <li class="flex items-center gap-4 py-2.5 px-2 rounded-3xl bg-theme-secondaryBg">
                 <HomeIcon class="w-6 h-6" />
                 <a href="" class="font-bold text-sm">Anasayfa</a>
             </li>

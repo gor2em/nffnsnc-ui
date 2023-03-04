@@ -3,6 +3,10 @@ import { computed } from "vue"
 
 const props = defineProps({
     gradientColors: Object,
+    gradientActive: {
+        type: Boolean,
+        default: false,
+    }
 });
 
 const gradientColor = computed(() => {
@@ -15,7 +19,8 @@ const gradientColor = computed(() => {
 
 </script>
 <template>
-    <div class="rounded-full py-0.5 px-0.5 bg-gradient-radial gradient-animate" :class="gradientColor">
+    <div class="rounded-full py-0.5 px-0.5"
+        :class="[gradientColor, gradientActive ? 'bg-gradient-radial gradient-animate' : '']">
         <slot />
     </div>
 </template>

@@ -9,8 +9,8 @@ defineProps({
 </script>
 <template>
     <SectionContent title="Kategoriler">
-        <Gradient>
-            <div class="bg-theme-primaryBg rounded-full py-2 flex space-x-4 overflow-x-scroll">
+        <Gradient gradient-active>
+            <div class="bg-theme-primaryBg rounded-3xl py-2 flex space-x-4 overflow-x-scroll">
                 <div v-for="(category, index) in categories" :key="index"
                     class="px-4 text-xs text-theme-primaryTextDark whitespace-nowrap overflow-hidden min-w-max">
                     {{ category }}

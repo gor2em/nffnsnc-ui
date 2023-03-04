@@ -11,8 +11,8 @@ import Heading3 from './Heading3.vue';
                     <p class="text-xs">non fui fui non sum non curo.</p>
                 </div>
                 <div class="flex items-center space-x-4 text-xs font-bold">
-                    <button class="border rounded-3xl py-1 px-4">Giriş Yap</button>
-                    <button class="border rounded-3xl py-1 px-4">Kaydol</button>
+                    <button class="py-1 px-4">Giriş Yap</button>
+                    <button class="py-1 px-4">Kaydol</button>
                 </div>
             </div>
         </div>

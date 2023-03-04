@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from "vue"
+import { computed, ref } from "vue"
 
 import BlogCategory from './BlogCategory.vue';
 import BlogDate from './BlogDate.vue';
@@ -23,23 +23,27 @@ const props = defineProps({
     gradientColors: Object,
 })
 
+const popularBlogsActive = ref(false);
+
 const contentType = computed(() => {
     if (props.type === "start") {
         return "justify-start items-start"
     }
 
+    popularBlogsActive.value = true;
     return "justify-center items-center"
 
 })
+
 </script>
 <template>
     <div class="flex flex-col h-full space-y-2" :class="contentType">
 
-        <BlogTitle :title="blog.title" />
-        <div class="flex flex-col space-y-2">
+        <BlogTitle :title="blog.title" :class="{ 'text-white': popularBlogsActive }" />
+        <div class="flex flex-col">
 
-            <UserCard :username="blog.user.name" :profile_image="blog.user.profile_image"
-                :gradient-colors="gradientColors" />
+            <UserCard :username="blog.user.name" :profile_image="blog.user.profile_image" :gradient-colors="gradientColors"
+                :popular-blogs-active="popularBlogsActive" />
 
             <BlogCategory :category="blog.category" v-if="categoryActive" />
 

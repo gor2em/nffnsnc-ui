@@ -21,14 +21,21 @@ import Sidebar from "./components/shared/sidebar/Sidebar.vue";
 
 <template>
   <div class="min-h-screen bg-theme-primaryBg text-theme-primaryText">
+
+    <div class="absolute w-full h-96 opacity-70">
+      <div
+        class="bg-[url('https://tailwindcss.com/_next/static/media/docs@tinypng.d9e4dcdc.png')] w-full h-full bg-no-repeat bg-contain bg-right-top">
+      </div>
+    </div>
+
     <div class="container mx-auto grid grid-cols-12 min-h-screen">
 
-      <div class="col-span-2 px-4 border-r border-r-theme-primaryBorder">
+      <div class="hidden lg:block col-span-2 px-4 border-r border-r-theme-primaryBorder">
         <Sidebar />
       </div>
 
 
-      <main class="col-span-7">
+      <main class="col-span-12 lg:col-span-7">
 
         <MainRoute />
 
@@ -39,14 +46,14 @@ import Sidebar from "./components/shared/sidebar/Sidebar.vue";
 
           <div class="grid grid-cols-8 gap-10">
 
-            <div class="col-span-5">
+            <div class="col-span-12 lg:col-span-5">
               <LatestBlogs :blogs="latestBlogs" />
             </div>
 
 
-            <div class="col-span-3">
+            <div class="col-span-12 lg:col-span-3">
 
-              <UserListItem title="Popüler Üyeler" :users="popularUsers" point-active />
+              <UserListItem title="Popüler Üyeler" :users="popularUsers" point-active list-type="popular" />
 
             </div>
 
@@ -57,7 +64,7 @@ import Sidebar from "./components/shared/sidebar/Sidebar.vue";
       </main>
 
 
-      <div class="col-span-3 px-4 border-l-theme-primaryBorder border-l">
+      <div class="col-span-12 lg:col-span-3 px-4 border-l-theme-primaryBorder border-l">
         <div class="sticky top-0">
 
           <Search />

@@ -5,7 +5,7 @@ defineProps({
 </script>
 <template>
     <div class="BlogDate">
-        <span class="text-xs font-medium text-zinc-600">Tarih :{{ date }}</span>
+        <span class="text-xs font-medium text-theme-primaryTextDark inline-flex">{{ date }} tarihinde yayınlandı.</span>
     </div>
 </template>
 <style scoped></style>
