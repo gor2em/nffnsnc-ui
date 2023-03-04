@@ -18,8 +18,8 @@ defineProps({
 </script>
 <template>
     <SectionContent :title="title">
-        <div class="flex flex-col space-y-5">
-            <div class="flex items-center justify-between bg-theme-secondaryBackground rounded-xl py-1 px-2"
+        <div class="flex flex-col space-y-1.5">
+            <div class="flex items-center justify-between border border-theme-primaryBorder rounded-xl py-2 px-2"
                 v-for="user in users" :key="user.username">
 
                 <UserCard :username="user.username" :alt="user.username" :profile_image="user.profile_image" />

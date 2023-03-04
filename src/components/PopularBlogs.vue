@@ -21,17 +21,17 @@ defineProps({
 
                 <div class="carousel__item absolute w-full">
                     <BlogContent :blog="blog" category-active
-                        :gradientColors="{ from: 'from-zinc-200', via: 'via-zinc-100', to: 'to-zinc-400' }" />
+                        :gradientColors="{ from: 'from-theme-fromGradient', to: 'to-theme-toGradient', via: 'via-theme-viaGradient' }" />
                 </div>
             </Slide>
 
             <template #addons>
                 <navigation>
                     <template #next>
-                        <span class="text-zinc-400 hover:text-zinc-200 text-2xl ml-4"> &gt; </span>
+                        <span class="text-theme-primaryIconActive text-3xl ml-4"> &gt; </span>
                     </template>
                     <template #prev>
-                        <span class="text-zinc-400 hover:text-zinc-200 text-2xl mr-4"> &lt; </span>
+                        <span class="text-theme-primaryIconActive text-3xl mr-4"> &lt; </span>
                     </template>
                 </navigation>
             </template>

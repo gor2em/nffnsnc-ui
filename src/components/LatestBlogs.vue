@@ -15,12 +15,12 @@ defineProps({
                 <!--update-->
                 <div class="BlogDetail absolute w-full py-1 px-2">
                     <div class="flex items-center justify-between space-x-2">
-                        <div class="flex items-center space-x-2 bg-black/20 rounded-sm px-2">
+                        <div class="flex items-center space-x-2 bg-theme-primaryBg rounded-sm px-2">
                             <EyeIcon class="w-4 h-4" />
                             <span class="text-xs font-bold ">127</span>
                         </div>
                         <div class="BlogCategory">
-                            <span class="text-xs bg-black/30 px-4 rounded-sm">{{ blog.category }}</span>
+                            <span class="text-xs bg-theme-primaryBg px-4 rounded-sm">{{ blog.category }}</span>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ defineProps({
             </div>
             <div class="w-1/2">
                 <BlogContent :blog="blog" type="start" date-active
-                    :gradientColors="{ from: 'from-zinc-200', via: 'via-zinc-100', to: 'to-zinc-400' }" />
+                    :gradientColors="{ from: 'from-theme-fromGradient', to: 'to-theme-toGradient', via: 'via-theme-viaGradient' }" />
             </div>
         </div>
     </SectionContent>

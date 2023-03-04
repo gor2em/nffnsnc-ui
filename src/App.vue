@@ -20,10 +20,10 @@ import Sidebar from "./components/shared/sidebar/Sidebar.vue";
 </script>
 
 <template>
-  <div class="min-h-screen bg-theme-primaryBackground text-theme-primary">
+  <div class="min-h-screen bg-theme-primaryBg text-theme-primaryText">
     <div class="container mx-auto grid grid-cols-12 min-h-screen">
 
-      <div class="col-span-2 px-4 border-r border-r-theme-secondaryBackground">
+      <div class="col-span-2 px-4 border-r border-r-theme-primaryBorder">
         <Sidebar />
       </div>
 
@@ -37,7 +37,7 @@ import Sidebar from "./components/shared/sidebar/Sidebar.vue";
 
           <PopularBlogs :blogs="popularBlogs" />
 
-          <div class="grid grid-cols-8 gap-4">
+          <div class="grid grid-cols-8 gap-10">
 
             <div class="col-span-5">
               <LatestBlogs :blogs="latestBlogs" />
@@ -57,7 +57,7 @@ import Sidebar from "./components/shared/sidebar/Sidebar.vue";
       </main>
 
 
-      <div class="col-span-3 px-4 border-l-theme-secondaryBackground border-l">
+      <div class="col-span-3 px-4 border-l-theme-primaryBorder border-l">
         <div class="sticky top-0">
 
           <Search />
@@ -73,7 +73,6 @@ import Sidebar from "./components/shared/sidebar/Sidebar.vue";
       </div>
     </div>
 
+    <FixedBanner />
   </div>
-
-  <FixedBanner />
 </template>
