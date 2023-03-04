@@ -1,51 +1,52 @@
 <script setup>
-import Heading3 from './Heading3.vue';
 
 import "vue3-carousel/dist/carousel.css"
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel"
+import { Carousel, Slide, Navigation } from "vue3-carousel"
 
-import popularBlogs from "../data/popularBlogs"
-import Gradient from './utils/Gradient.vue';
+import SectionContent from "./utils/SectionContent.vue";
+import BlogContent from "../components/blog/BlogContent.vue"
+
+defineProps({
+    blogs: Array,
+})
 
 </script>
 <template>
-    <div class="PopularBlogs">
-        <Heading3 title="Popüler Bloglar" />
-        <Carousel :items-to-show="2.5" :wrap-around=true class="cursor-pointer">
-            <Slide v-for="slide in popularBlogs" :key="slide.img" class="max-h-40">
+    <SectionContent title="Popüler Bloglar">
 
-                <img :src="slide.img" :alt="slide.title" class="w-full object-cover brightness-50">
+        <Carousel :items-to-show="2.5" :wrap-around=true class="cursor-pointer" color>
+            <Slide v-for="blog in blogs" :key="blog.title" class="max-h-40">
+
+                <img :src="blog.img" :alt="blog.title" class="w-full object-cover brightness-50">
+
                 <div class="carousel__item absolute w-full">
-                    <div class="flex flex-col justify-center items-center h-full space-y-2">
-                        <h4 class="font-bold capitalize text-base">
-                            {{ slide.title }}
-                        </h4>
-                        <div class="flex flex-col space-y-2">
-                            <div class="flex items-center space-x-2">
-                                <Gradient>
-                                    <img :src="slide.user.profile_image" :alt="slide.user.name"
-                                        class="w-7 h-7 rounded-full">
-                                </Gradient>
-                                <span class="text-xs shadow-2xl font-medium">{{ slide.user.name }}</span>
-                            </div>
-                            <div>
-                                <span class="text-xs bg-white/20 px-2">{{ slide.category }}</span>
-                            </div>
-                        </div>
-                    </div>
+                    <BlogContent :blog="blog" category-active
+                        :gradientColors="{ from: 'from-zinc-200', via: 'via-zinc-100', to: 'to-zinc-400' }" />
                 </div>
             </Slide>
 
             <template #addons>
-                <Navigation />
+                <navigation>
+                    <template #next>
+                        <span class="text-zinc-400 hover:text-zinc-200 text-2xl ml-4"> &gt; </span>
+                    </template>
+                    <template #prev>
+                        <span class="text-zinc-400 hover:text-zinc-200 text-2xl mr-4"> &lt; </span>
+                    </template>
+                </navigation>
             </template>
         </Carousel>
-    </div>
+    </SectionContent>
 </template>
 <style scoped>
 /* .carousel__slide {
     padding: 5px;
 } */
+
+.carousel__prev,
+.carousel__next {
+    color: var(--primary-color);
+}
 
 .carousel__viewport {
     perspective: 2000px;

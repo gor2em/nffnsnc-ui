@@ -5,10 +5,11 @@
 ### Todo
 
 - [ ] Dark Mode
-- [ ] HTML to Component
+- [x] HTML to Component
 - [ ] Root Colors
 - [ ] Fix Styles
 - [ ] Latest Blog Card Design
+- [ ] Base Components
 - [ ] Auth Screens
 - [ ] Logged User Scenario
 - [ ] Responsive

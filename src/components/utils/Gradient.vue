@@ -1,10 +1,21 @@
 <script setup>
-defineProps({
+import { computed } from "vue"
+
+const props = defineProps({
     gradientColors: Object,
 });
+
+const gradientColor = computed(() => {
+    if (props.gradientColors) {
+        return `${props.gradientColors.from} ${props.gradientColors.via} ${props.gradientColors.to}`
+    }
+
+    return "from-amber-400 via-pink-600 to-cyan-400"
+})
+
 </script>
 <template>
-    <div class="rounded-full py-0.5 px-0.5 bg-gradient-radial from-amber-400 via-pink-600 to-cyan-400 gradient-animate">
+    <div class="rounded-full py-0.5 px-0.5 bg-gradient-radial gradient-animate" :class="gradientColor">
         <slot />
     </div>
 </template>
