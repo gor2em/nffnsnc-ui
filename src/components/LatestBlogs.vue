@@ -1,5 +1,5 @@
 <script setup>
-import { EyeIcon } from '@heroicons/vue/24/outline';
+import { ChatBubbleBottomCenterIcon, EyeIcon, HeartIcon } from '@heroicons/vue/24/solid';
 import BlogContent from './blog/BlogContent.vue';
 import SectionContent from './utils/SectionContent.vue';
 
@@ -9,24 +9,21 @@ defineProps({
 </script>
 <template>
     <SectionContent title="Son Bloglar">
-    <div v-for="blog in blogs" :key="blog.title"
-        class="flex justify-center flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 pb-4">
+        <div v-for="blog in blogs" :key="blog.title"
+            class="flex justify-center flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 pb-4">
 
-        <div class="w-full lg:w-1/2 relative">
-            <!--update-->
-            <!-- <div class="BlogDetail absolute w-full py-1 px-2">
-                    <div class="flex items-center justify-between space-x-2">
-                                        <div class="flex items-center space-x-2 bg-theme-primaryBg rounded-sm px-2">
-                                            <EyeIcon class="w-4 h-4" />
-                                            <span class="text-xs font-bold ">127</span>
-                                        </div>
-                                        <div class="BlogCategory">
-                                            <span class="text-xs bg-theme-primaryBg px-4 rounded-sm">{{ blog.category }}</span>
-                                        </div>
-                                    </div>
-                                </div> -->
-                <!--update-->
+            <div class="w-full lg:w-1/2 relative cursor-pointer">
+
+                <div class="absolute w-full z-20">
+
+                    <div class="flex items-start px-2 py-2 w-full">
+                        <div class="text-xs px-2 rounded-sm bg-theme-primaryBg/90 border backdrop-blur-sm text-zinc-50">
+                            <span>{{ blog.category }}</span>
+                        </div>
+                    </div>
+                </div>
                 <img :src="blog.img" :alt="blog.title" class="object-cover w-full max-h-32 rounded-md">
+
             </div>
             <div class="w-full lg:w-1/2 lg:border-none border-b border-b-theme-primaryBorder">
                 <BlogContent :blog="blog" type="start" date-active
