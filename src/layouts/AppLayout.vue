@@ -17,7 +17,7 @@ const isDark = ref(false);
 <template>
     <div class="min-h-screen bg-theme-primaryBg text-theme-primaryText" :class="{ 'light-theme': isDark }">
 
-        <div class="absolute w-full h-96 opacity-60">
+        <div class="absolute w-full h-96 opacity-30">
             <div
                 class="bg-[url('https://tailwindcss.com/_next/static/media/docs@tinypng.d9e4dcdc.png')] w-full h-full bg-no-repeat bg-contain bg-right-top">
             </div>
