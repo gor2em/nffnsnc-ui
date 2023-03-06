@@ -6,7 +6,7 @@ defineProps({
 
 </script>
 <template>
-    <div class="SectionContent flex flex-col mb-4">
+    <div class="SectionContent flex flex-col">
         <Heading3 :title="title" />
         <div>
             <slot />

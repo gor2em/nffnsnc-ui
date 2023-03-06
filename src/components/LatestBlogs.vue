@@ -9,7 +9,7 @@ defineProps({
 </script>
 <template>
     <SectionContent title="Son Bloglar">
-    <div v-for="blog in blogs" :key="blog.title" class="flex space-x-4 pb-4">
+    <div v-for="blog in blogs" :key="blog.title" class="flex flex-col lg:flex-row space-x-4 pb-4">
 
         <div class="w-1/2 relative">
             <!--update-->
