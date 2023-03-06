@@ -28,10 +28,10 @@ defineProps({
             <template #addons>
                 <navigation>
                     <template #next>
-                        <span class="text-theme-primaryIconActive text-3xl ml-4"> &gt; </span>
+                        <span class="text-theme-primaryText text-3xl ml-4"> &gt; </span>
                     </template>
                     <template #prev>
-                        <span class="text-theme-primaryIconActive text-3xl mr-4"> &lt; </span>
+                        <span class="text-theme-primaryText text-3xl mr-4"> &lt; </span>
                     </template>
                 </navigation>
             </template>

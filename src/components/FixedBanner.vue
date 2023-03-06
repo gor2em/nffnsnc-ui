@@ -3,7 +3,8 @@ import Heading3 from './Heading3.vue';
 </script>
 <template>
     <!--fixed banner update design-->
-    <div class="Banner fixed bottom-0 px-4 bg-emerald-400/50 backdrop-blur-sm text-theme-secondary w-full">
+    <div
+        class="Banner fixed bottom-0 px-4 bg-gradient-to-r z-50 from-cyan-400/20 to-amber-400/20 via-emerald-400/50 backdrop-blur-sm text-theme-secondary w-full">
         <div class="container mx-auto py-4">
             <div class="flex items-center justify-between">
                 <div class="flex flex-col space-y-1">
