@@ -4,12 +4,16 @@
 
 ### Todo
 
-- [ ] Dark Mode
+- [x] Dark Mode
 - [x] HTML to Component
-- [ ] Root Colors
-- [ ] Fix Styles
-- [ ] Latest Blog Card Design
+- [x] Root Colors
+- [x] Fix Styles
+- [x] Latest Blog Card Design
 - [ ] Base Components
 - [ ] Auth Screens
 - [ ] Logged User Scenario
+- [ ] Dynamic Menu
 - [ ] Responsive
+- [ ] Create Blog Page
+- [ ] Blog Detail Page
+- [ ] Right Section Details
