@@ -10,12 +10,11 @@ const props = defineProps({
     users: Array,
     listType: {
         type: String,
-        required: true,
+        default: "normal"
     },
     pointActive: {
         type: Boolean,
         default: false,
-        required: true
     },
     title: {
         type: String,

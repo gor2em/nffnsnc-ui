@@ -10,7 +10,6 @@ const props = defineProps({
     blog: Object,
     type: {
         type: String,
-        required: true
     },
     categoryActive: {
         type: Boolean,

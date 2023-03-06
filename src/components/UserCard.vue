@@ -11,7 +11,6 @@ defineProps({
     },
     gradientsActive: {
         type: Boolean,
-        required: true
     }
 });
 
