@@ -1,7 +1,7 @@
 <script setup>
-import { HomeIcon, CogIcon, SunIcon, LanguageIcon, MagnifyingGlassIcon } from "@heroicons/vue/24/outline"
+import { ref } from "vue"
+
 import Categories from "./components/Categories.vue";
-import Heading3 from "./components/Heading3.vue";
 import LatestBlogs from "./components/LatestBlogs.vue";
 import PopularBlogs from "./components/PopularBlogs.vue";
 import FixedBanner from "./components/FixedBanner.vue"
@@ -17,12 +17,14 @@ import BaseFooter from "./components/shared/BaseFooter.vue";
 import Search from "./components/form/Search.vue";
 import Sidebar from "./components/shared/sidebar/Sidebar.vue";
 
+const isDark = ref(false);
+
 </script>
 
 <template>
-  <div class="min-h-screen bg-theme-primaryBg text-theme-primaryText">
+  <div class="min-h-screen bg-theme-primaryBg text-theme-primaryText" :class="{ 'light-theme': isDark }">
 
-    <div class="absolute w-full h-96 opacity-70">
+    <div class="absolute w-full h-96 opacity-60">
       <div
         class="bg-[url('https://tailwindcss.com/_next/static/media/docs@tinypng.d9e4dcdc.png')] w-full h-full bg-no-repeat bg-contain bg-right-top">
       </div>
@@ -34,12 +36,10 @@ import Sidebar from "./components/shared/sidebar/Sidebar.vue";
         <Sidebar />
       </div>
 
-
       <main class="col-span-12 lg:col-span-7">
+        <MainRoute @update="(value) => isDark = value" />
 
-        <MainRoute />
-
-        <div class="flex flex-col space-y-4 px-4">
+        <div class="flex flex-col space-y-8 px-4">
           <Categories :categories="categories" />
 
           <PopularBlogs :blogs="popularBlogs" />
