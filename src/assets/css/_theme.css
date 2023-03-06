@@ -3,12 +3,12 @@
   --primary-nav-color: #fafafa;
   --primary-head-color: #f4f4f5;
   --primary-text-color: #d4d4d8;
-  --primary-text-dark-color: #52525b;
-  --primary-text-more-dark-color: #27272a;
-  --primary-text-success-color: #34d399;
+  --primary-text-2x-color: #52525b;
+  --primary-text-4x-color: #27272a;
+  --primary-success-color: #34d399;
   --primary-border-color: #18181b;
   --primary-icon-color: #3f3f46;
-  --primary-icon-active-color: #e4e4e7;
+  --primary-icon-active-color: #141425;
 
   --secondary-bg-color: #18181b;
   --backdrop-main-bg-color: #00000033;

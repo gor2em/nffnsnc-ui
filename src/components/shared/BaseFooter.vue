@@ -2,8 +2,8 @@
 
 </script>
 <template>
-    <footer class="text-theme-primaryTextDark text-xs font-medium">
-        <div class="flex flex-wrap space-x-3 divide-x divide-theme-primaryMoreTextDark mb-1">
+    <footer class="text-theme-primaryText2x text-xs font-medium">
+        <div class="flex flex-wrap space-x-3 divide-x divide-theme-primaryText2x mb-1">
             <a href="#" class="text-xs font-medium">nffnsnc nedir?</a>
             <a href="#" class="text-xs font-medium pl-2">S.S.S</a>
             <a href="#" class="text-xs font-medium pl-2">bize ulaş</a>

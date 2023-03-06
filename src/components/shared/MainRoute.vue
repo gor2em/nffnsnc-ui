@@ -17,9 +17,8 @@ const toggleTheme = () => {
     <div
         class="MainRoute mb-4 h-12 flex items-center justify-between text-center bg-theme-backdropMain backdrop-blur-sm sticky top-0 z-50 px-4 border-b border-theme-primaryBorder">
         <Heading3 title="#anasayfa" :has-margin=false />
-        <div class="flex space-x-4 text-theme-primaryIconActive">
+        <div class="flex space-x-4 text-theme2x">
             <SunIcon class="w-5 h-5 cursor-pointer" @click="toggleTheme" />
-            <LanguageIcon class="w-5 h-5" />
         </div>
     </div>
 </template>

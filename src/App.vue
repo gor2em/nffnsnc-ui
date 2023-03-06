@@ -30,7 +30,7 @@ const isDark = ref(false);
       </div>
     </div>
 
-    <div class="container mx-auto grid grid-cols-12 min-h-screen">
+    <div class="container mx-auto grid grid-cols-12 min-h-screen z-50">
 
       <div class="hidden lg:block col-span-2 px-4 border-r border-r-theme-primaryBorder">
         <Sidebar />
@@ -39,19 +39,19 @@ const isDark = ref(false);
       <main class="col-span-12 lg:col-span-7">
         <MainRoute @update="(value) => isDark = value" />
 
-        <div class="flex flex-col space-y-8 px-4">
+        <div class="flex flex-col space-y-8 px-4 mb-40">
           <Categories :categories="categories" />
 
           <PopularBlogs :blogs="popularBlogs" />
 
           <div class="grid grid-cols-8 gap-10">
 
-            <div class="col-span-12 lg:col-span-5">
+            <div class="col-span-8 lg:col-span-5">
               <LatestBlogs :blogs="latestBlogs" />
             </div>
 
 
-            <div class="col-span-12 lg:col-span-3">
+            <div class="col-span-8 lg:col-span-3">
 
               <UserListItem title="Popüler Üyeler" :users="popularUsers" point-active list-type="popular" />
 

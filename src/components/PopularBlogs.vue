@@ -17,7 +17,7 @@ defineProps({
         <Carousel :items-to-show="2.5" :wrap-around=true class="cursor-pointer" color>
             <Slide v-for="blog in blogs" :key="blog.title" class="max-h-40">
 
-                <img :src="blog.img" :alt="blog.title" class="w-full object-cover brightness-50">
+                <img :src="blog.img" :alt="blog.title" class="w-full h-full object-cover brightness-50">
 
                 <div class="carousel__item absolute w-full">
                     <BlogContent :blog="blog" category-active
